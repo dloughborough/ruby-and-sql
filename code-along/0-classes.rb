@@ -6,3 +6,18 @@
 # String Class
 
 # String Methods
+
+#we are creating a class here
+
+class Dog
+
+    def speak
+        puts "Woof"
+    end
+
+end
+
+#need to create a new dog - so that the class actually has output (we give a variable name) - use class of dog to create a new dog
+
+Jenkins = Dog.new
+Jenkins.speak

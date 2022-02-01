@@ -25,6 +25,8 @@ Activity.destroy_all
 
 # 5. Insert at least 2 activities into the activities table
 
+
+
 # 6. Loop through the salespeople and display their activites and related contacts, e.g.:
 
 # ---------------------------------

@@ -4,6 +4,12 @@
 # rails runner labs/2-associations.rb
 
 # 1. write code to display each contact (you can reuse the previous lab's code) and include the contact's company name, e.g.:
+puts "Contacts: #{Contact.all.count}"
+all_contacts = Contact.all
+
+for contact in all_contacts
+    puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
+end
 
 # ---------------------------------
 # Contacts: 4
@@ -13,6 +19,23 @@
 # Tim Cook - tim@apple.com - Apple Inc.
 
 # 2. similar to above, but this time organized by company, write code to display each company (name) and its contacts, e.g.:
+apple = Company.where({name: "Apple, Inc."})[0]
+puts "Apple, Inc."
+for contact in apple.contacts
+    puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
+end
+
+amazon = Company.where({name: "Amazon.com, Inc."})[0]
+puts "Amazon.com, Inc."
+for contact in amazon.contacts
+    puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
+end
+
+tesla = Company.where({name: "Tesla, Inc."})[0]
+puts "Tesla, Inc."
+for contact in tesla.contacts
+    puts "#{contact.first_name} #{contact.last_name} - #{contact.email}"
+end
 
 # ---------------------------------
 # Apple Inc.
